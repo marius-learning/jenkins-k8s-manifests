@@ -14,7 +14,8 @@ pipeline {
 
     stages {
         stage("Update Manifest files") {
-            sh """
+            steps {
+                sh """
                 git config user.email $GITHUB_USER_EMAIL
                 git config user.name $GITHUB_CREDS_USR
                 cat app.manifest.yml
@@ -23,6 +24,7 @@ pipeline {
                 git add .
                 git commit -m 'Updated container image tag with value $IMAGE_TAG'
             """
+            }
         }
     }
 }
