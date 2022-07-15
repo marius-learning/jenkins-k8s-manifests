@@ -15,7 +15,7 @@ spec:
         app: flask
     spec:
       containers:
-        - image: "mariusmihai69/flask-app:69"
+        - image: "mariusmihai69/flask-app:10"
           name: flask
           ports:
             - containerPort: 8080
