@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GITHUB_CREDS = environment("GITHUB")
+        GITHUB_CREDS = credentials("GITHUB")
         IMAGE_NAME = "mariusmihai69/flask-app"
         GITHUB_REPO_NAME = " jenkins-k8s-manifests.git"
         GITHUB_USER_EMAIL = "mariusmihai.learning@gmail.com"
