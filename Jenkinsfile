@@ -23,6 +23,7 @@ pipeline {
                 cat app.manifest.yml
                 git add .
                 git commit -m 'Updated container image tag with value $IMAGE_TAG'
+                git push https://$GITHUB_CREDS_USR:$GITHUB_CREDS_PWD@github.com/$GITHUB_CREDS_USR/$GITHUB_REPO_NAME HEAD:main
             """
             }
         }
