@@ -28,8 +28,8 @@ metadata:
     app: lb-flask
 spec:
   type: LoadBalancer
+  selector:
+    app: flask
   ports:
     - port: 80
       targetPort: 8080
-      selector:
-        app: flask
